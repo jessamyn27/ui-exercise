@@ -35,11 +35,11 @@ class Table2 extends Component {
     };
   }
   render() {
-    console.log(this.props, ' table1 props render');
+    console.log(this.props, ' table2 props render');
 
     return (
       <div>
-        <BootstrapTable data={this.props.fields} options={this.options} striped hover condensed scrollTop={ 'Bottom' } >
+        <BootstrapTable data={this.props.entries} options={this.options} striped hover condensed scrollTop={ 'Bottom' } >
           <TableHeaderColumn isKey dataField='title' dataSort defaultASC>
             Title
           </TableHeaderColumn>

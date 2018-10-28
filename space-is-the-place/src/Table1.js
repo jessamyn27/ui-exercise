@@ -12,8 +12,7 @@ class Table1 extends Component {
     return (
       <div>
         {/* <h1>These are Space Items</h1> */}
-
-        <BootstrapTable data={this.props.sys} options={this.options} striped hover condensed scrollTop={ 'Bottom' } >
+        <BootstrapTable data={this.props.entries} options={this.options} striped hover condensed scrollTop={ 'Bottom' } >
           <TableHeaderColumn isKey dataField='id' dataSort defaultASC>
             Title
           </TableHeaderColumn>

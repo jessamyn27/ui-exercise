@@ -21,37 +21,35 @@ class App extends Component {
 
   this.state = {
     space: [],
-    fields: [],
-    sys: []
+    entries: []
     }
   }
 componentDidMount(){
-  fetch("http://localhost:3000/space/").then((res) => {
-    return res.json();
-  }).then((json) => {
-    let fields = []
-    let sys = []
-    for (let i = 0; i < json.items.length; i++) {
-    fields.push(json.items[i].fields)
-    sys.push(json.items[i].sys)
-    }
-    console.log(fields, sys, ' fields and sys');
-    this.setState({space: json.items, fields: fields, sys: sys})
-    console.log(json.items, 'inside cDM');
-  });
-  // fetch("http://localhost:3000/space/yadj1kx9rmg0/entries").then((res) => {
+  // fetch("http://localhost:3000/space/").then((res) => {
   //   return res.json();
   // }).then((json) => {
-  //   let fields = []
-  //   let sys = []
+  //   let entries = []
+  //   let assets = []
   //   for (let i = 0; i < json.items.length; i++) {
-  //   fields.push(json.items[i].fields)
-  //   sys.push(json.items[i].sys)
+  //   entries.push(json.items[i].fields)
+  //   assets.push(json.items[i].sys)
   //   }
-  //   console.log(fields, sys, ' fields and sys');
-  //   this.setState({space: json.items, fields: fields, sys: sys})
-  //   console.log(json.items, 'inside NEXT FETCH');
+  //   console.log(entries, assets, ' entries and assets ');
+  //   this.setState({space: json.items, entries: entries, assets: assets})
+  //   console.log(json.items, 'inside cDM');
   // });
+  fetch("http://localhost:3000/space/yadj1kx9rmg0/entries").then((res) => {
+    return res.json();
+  }).then((json) => {
+    let entries = []
+    for (let i = 0; i < json.items.length; i++) {
+    entries.push(json.items[i].fields)
+    entries.push(json.items[i].sys)
+    }
+    console.log(entries, ' entries  ');
+    this.setState({space: json.items, entries: entries})
+    console.log(json.items, 'fetch entries');
+  });
   // fetch("http://localhost:3000/space/yadj1kx9rmg0/assets").then((res) => {
   //   return res.json();
   // }).then((json) => {
@@ -73,13 +71,15 @@ componentDidMount(){
       <div className="App">
         <Sidebar />
       <div className="App container">
-        <Table1 fields={this.state.fields} sys={this.state.sys}/>
-        <Table2 fields={this.state.fields} sys={this.state.sys}/>
-<Switch>
+        {/* <Table1 fields={this.state.entries} sys={this.state.entries}/> */}
+        {/* <Table2 fields={this.state.entries} sys={this.state.entries}/> */}
+        <SpaceOne entries={this.state.entries} assets={this.state.entries}/>
+
+{/* <Switch>
 <Route exact path='/myfirstspace' fields={this.state.fields} sys={this.state.sys} component={SpaceOne}/>
 <Route exact path='/mysecondspace' component={SpaceTwo} />
 <Route exact path='/mythirdspace' component={SpaceThree} />
-</Switch>
+</Switch> */}
 
       </div>
     </div>);
