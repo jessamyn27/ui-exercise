@@ -61,7 +61,7 @@ componentDidMount(){
       <div className="App">
         <Sidebar />
       <div className="App container">
-        {/* <SpaceOne fields={this.state.fields} sys={this.state.sys}/> */}
+        <Table1 fields={this.state.fields} sys={this.state.sys}/>
 {/* <SpaceOne fields={this.state.fields} sys={this.state.sys}/> */}
 <Switch>
 <Route exact path='/myfirstspace' component={SpaceOne}/>
