@@ -3,27 +3,27 @@ import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import '../node_modules/react-bootstrap-table/css/react-bootstrap-table.css'
 import '../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 
-var data = [
-  {
-    title: 1,
-    summary: 'example summary 1',
-    createdBy: 'jessa rae',
-    updatedBy: 'dyna',
-    lastUpdated: '10-26-2018'
-  }, {
-    title: 2,
-    summary: 'example summary 2',
-    createdBy: 'jessamyn',
-    updatedBy: 'pina',
-    lastUpdated: '10-27-2018'
-  }, {
-    title: 3,
-    summary: 'example summary 3',
-    createdBy: 'jessatwiggle',
-    updatedBy: 'bambino',
-    lastUpdated: '10-29-2018'
-  }
-];
+// var data = [
+//   {
+//     title: 1,
+//     summary: 'example summary 1',
+//     createdBy: 'jessa rae',
+//     updatedBy: 'dyna',
+//     lastUpdated: '10-26-2018'
+//   }, {
+//     title: 2,
+//     summary: 'example summary 2',
+//     createdBy: 'jessamyn',
+//     updatedBy: 'pina',
+//     lastUpdated: '10-27-2018'
+//   }, {
+//     title: 3,
+//     summary: 'example summary 3',
+//     createdBy: 'jessatwiggle',
+//     updatedBy: 'bambino',
+//     lastUpdated: '10-29-2018'
+//   }
+// ];
 
 class Table2 extends Component {
   constructor(props) {
@@ -35,9 +35,11 @@ class Table2 extends Component {
     };
   }
   render() {
+    console.log(this.props, ' table1 props render');
+
     return (
       <div>
-        <BootstrapTable data={this.props.data} options={this.options} striped hover condensed scrollTop={ 'Bottom' } >
+        <BootstrapTable data={this.props.fields} options={this.options} striped hover condensed scrollTop={ 'Bottom' } >
           <TableHeaderColumn isKey dataField='title' dataSort defaultASC>
             Title
           </TableHeaderColumn>
@@ -47,8 +49,8 @@ class Table2 extends Component {
           <TableHeaderColumn dataField='fileName' dataSort>
             File Name
           </TableHeaderColumn>
-          <TableHeaderColumn dataField='createdBy' dataSort>
-            Created By
+          <TableHeaderColumn dataField='upload' dataSort>
+            Upload
           </TableHeaderColumn>
           <TableHeaderColumn dataField='updatedBy' dataSort>
             Updated By

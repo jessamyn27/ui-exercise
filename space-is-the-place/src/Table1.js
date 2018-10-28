@@ -14,19 +14,19 @@ class Table1 extends Component {
         {/* <h1>These are Space Items</h1> */}
 
         <BootstrapTable data={this.props.sys} options={this.options} striped hover condensed scrollTop={ 'Bottom' } >
-          <TableHeaderColumn isKey dataField='title' dataSort defaultASC>
+          <TableHeaderColumn isKey dataField='id' dataSort defaultASC>
             Title
           </TableHeaderColumn>
-          <TableHeaderColumn dataField='summary' dataSort>
+          <TableHeaderColumn dataField='type' dataSort>
             Summary
           </TableHeaderColumn>
-          <TableHeaderColumn dataField='createdBy' dataSort>
+          <TableHeaderColumn dataField='createdAt' dataSort>
             Created By
           </TableHeaderColumn>
           <TableHeaderColumn dataField='updatedBy' dataSort>
             Updated By
           </TableHeaderColumn>
-          <TableHeaderColumn dataField='lastUpdated' dataSort>
+          <TableHeaderColumn dataField='createdBy' dataSort>
             Last Updated
           </TableHeaderColumn>
         </BootstrapTable>

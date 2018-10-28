@@ -13,6 +13,7 @@ class SpaceOne extends Component {
     super(props);
 }
   render() {
+    console.log(this.props, 'props for SpaceOne');
     return (
       <div>
         {/* <NavItem eventKey={1} title="Nav 1" > */}
@@ -20,7 +21,7 @@ class SpaceOne extends Component {
           <Tabs defaultActiveKey={1}>
             <Tab eventKey={1} title='Tab 1'>
               <p className="Table-header">Entries</p>
-              <Table1 />
+              <Table1 data={this.props.sys}/>
             </Tab>
             <Tab eventKey={2} title='Tab 2'>
               <p className="Table-header">Assets</p>
