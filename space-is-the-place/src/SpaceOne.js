@@ -17,7 +17,7 @@ class SpaceOne extends Component {
     return (
       <div>
         {/* <NavItem eventKey={1} title="Nav 1" > */}
-          My First Space
+          <h4>My First Space</h4>
           <Tabs defaultActiveKey={1}>
             <Tab eventKey={1} title='Tab 1'>
               <p className="Table-header">Entries</p>

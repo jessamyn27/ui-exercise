@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom';
 export default props => {
   return (
     <Menu>
-      <a className="menu-item" href="/">
-      Table1      </a>
-
+      
       <a className="menu-item" href="/myfirstspace">
         My First Space
       </a>

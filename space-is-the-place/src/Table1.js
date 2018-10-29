@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import '../node_modules/react-bootstrap-table/css/react-bootstrap-table.css';
 import '../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
+var Base64 = require('js-base64').Base64;
+
 
 class Table1 extends Component {
   constructor(props) {
@@ -19,13 +21,13 @@ class Table1 extends Component {
           <TableHeaderColumn dataField='type' dataSort>
             Summary
           </TableHeaderColumn>
-          <TableHeaderColumn dataField='createdAt' dataSort>
+          <TableHeaderColumn dataField='createdBy' dataSort>
             Created By
           </TableHeaderColumn>
           <TableHeaderColumn dataField='updatedBy' dataSort>
             Updated By
           </TableHeaderColumn>
-          <TableHeaderColumn dataField='createdBy' dataSort>
+          <TableHeaderColumn dataField='updatedAt' dataSort>
             Last Updated
           </TableHeaderColumn>
         </BootstrapTable>
